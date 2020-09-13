@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATA DE LA NOTIFICACIÓN:"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Title: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification" />
+
+    <TextView
+        android:id="@+id/title_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/title_label"
+        app:layout_constraintStart_toEndOf="@id/title_label"
+        tools:text="Sports News" />
+
+    <TextView
+        android:id="@+id/body_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Body: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_value" />
+
+    <TextView
+        android:id="@+id/body_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/body_label"
+        app:layout_constraintStart_toEndOf="@id/title_label"
+        tools:text="Bayern Champion!!" />
+
+    <TextView
+        android:id="@+id/payload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="CARGA DE DATOS:"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/body_label" />
+
+    <TextView
+        android:id="@+id/data_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Data: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payload" />
+
+    <TextView
+        android:id="@+id/data_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/data_label"
+        app:layout_constraintStart_toEndOf="@id/data_label"
+        tools:text="Value" />
+
+    <TextView
+        android:id="@+id/intentData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="INTENT:"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data_label" />
+
+    <TextView
+        android:id="@+id/intent_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Value: "
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/intentData" />
+
+    <TextView
+        android:id="@+id/intent_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/intent_label"
+        app:layout_constraintStart_toEndOf="@id/intent_label"
+        tools:text="Intent value" />
+
+    <Button
+        android:id="@+id/get_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="GET TOKEN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/intent_label" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="LIMPIAR"
+        app:layout_constraintBaseline_toBaselineOf="@id/get_token"
+        app:layout_constraintStart_toEndOf="@id/get_token" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Topic: Deportes"
+        app:layout_constraintTop_toBottomOf="@id/btn_clear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
