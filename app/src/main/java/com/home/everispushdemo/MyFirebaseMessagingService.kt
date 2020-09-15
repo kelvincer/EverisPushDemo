@@ -61,30 +61,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
-    /*private fun handleMessage(remoteMessage: RemoteMessage) {
-        //1
-        val handler = Handler(Looper.getMainLooper())
-
-
-        Log.d(TAG, "drink it")
-
-        //2
-        handler.post(Runnable {
-            remoteMessage.getNotification()?.getBody()
-            makeText(baseContext, remoteMessage.getNotification()?.getBody(),
-                    LENGTH_LONG).show()
-
-            remoteMessage.notification?.let {
-                *//*val intent = Intent("MyData")
-                intent.putExtra("message", it.body);
-                broadcaster?.sendBroadcast(intent);*//*
-                *//*val intent = Intent("MyData")
-                intent.putExtra("message", remoteMessage.data["text"]);
-                broadcaster?.sendBroadcast(intent);*//*
-            }
-        })
-    }*/
-
     companion object {
         private const val TAG = "MyFirebaseMessagingS"
     }

@@ -58,12 +58,6 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(dataMessageReceiver, IntentFilter("Data-Push-Event"))
     }
 
-    override fun onPause() {
-        super.onPause()
-        //unregisterReceiver(messageReceiver)
-        //unregisterReceiver(dataMessageReceiver)
-    }
-
     private val dataMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent) {
             data_value.text = intent.getStringExtra("value")
