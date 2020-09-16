@@ -35,10 +35,13 @@
 package com.home.everispushdemo
 
 import android.content.Intent
+import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
+
+    val TAG = MyFirebaseMessagingService::class.java.simpleName
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
@@ -61,7 +64,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
-    companion object {
-        private const val TAG = "MyFirebaseMessagingS"
+    /**
+     * Called if InstanceID token is updated. This may occur if the security of
+     * the previous token had been compromised. Note that this is called when the InstanceID token
+     * is initially generated so this is where you would retrieve the token.
+     */
+    override fun onNewToken(p0: String) {
+        super.onNewToken(p0)
+        Log.d(TAG, "new token: $p0")
     }
 }

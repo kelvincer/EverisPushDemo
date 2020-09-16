@@ -42,6 +42,14 @@ class MainActivity : AppCompatActivity() {
             intent_value.text = ""
         }
 
+        delete_token.setOnClickListener {
+            Thread {
+                FirebaseInstanceId.getInstance()
+                    .deleteToken(getString(R.string.gcm_defaultSenderId), "FCM")
+                Log.d(TAG, "Successful delete token")
+            }.start()
+        }
+
         checkBoxSports.isChecked = requestSubscription("Sports");
 
         checkBoxSports.setOnCheckedChangeListener(

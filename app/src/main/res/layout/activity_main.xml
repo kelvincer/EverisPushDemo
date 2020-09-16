@@ -149,12 +149,21 @@
         app:layout_constraintBaseline_toBaselineOf="@id/get_token"
         app:layout_constraintStart_toEndOf="@id/get_token" />
 
+    <Button
+        android:id="@+id/delete_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="DELETE TOKEN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_token" />
+
     <CheckBox
         android:id="@+id/checkBoxSports"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Topic: Deportes"
-        app:layout_constraintTop_toBottomOf="@id/btn_clear" />
+        app:layout_constraintTop_toBottomOf="@id/delete_token" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
